@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Trajetória e Projetos</title>
+    <link rel="stylesheet" href="./Styles/HomePage.css">
+    <link rel="stylesheet" href="./Styles/Sobre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="HomePage.html" class="logo-link">
+                <img src="./assets/Logo_Metidieri.png" alt="Logotipo do Portfólio" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="#sobre" class="active">Sobre</a></li>
+                    <li><a href="Servicos.html">Serviços</a></li>
+                    <li><a href="Contato.html class="btn-nav">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero sobre-hero">
+            <div class="container hero-grid">
+                <div class="hero-image reveal">
+                    <img src="./assets/foto_sobre.png" alt="Minha Trajetória">
+                </div>
+                <div class="hero-text reveal">
+                    <span class="tag">Quem eu sou</span>
+                    <h2>Construindo o futuro através do <span>código e design</span>.</h2>
+                    <p>Combinando a base teórica da FATEC com a visão prática de UI/UX do Google para entregar soluções digitais completas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="academic-title">Trajetória Acadêmica</h2>
+                </div>
+                
+                <div class="cards-grid">
+                    <div class="custom-card reveal">
+                        <div class="card-icon"><i class="fas fa-university"></i></div>
+                        <h3>Análise de Sistemas</h3>
+                        <span class="institution">FATEC Taquaritinga (2024-2025)</span>
+                        <p>Foco em lógica avançada, engenharia de software e segurança da informação.</p>
+                    </div>
+
+                    <div class="custom-card reveal" style="transition-delay: 0.1s;">
+                        <div class="card-icon"><i class="fas fa-code"></i></div>
+                        <h3>Técnico em Sistemas</h3>
+                        <span class="institution">Etec Ibitinga (2021-2023)</span>
+                        <p>Desenvolvimento de capacidades técnicas para o mercado e ensino superior.</p>
+                    </div>
+
+                    <div class="custom-card reveal" style="transition-delay: 0.2s;">
+                        <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <span class="institution">Google Certificates</span>
+                        <p>Especialização em design centrado no usuário e prototipagem de alta fidelidade.</p>
+                    </div>
+                </div>
+
+                <div class="section-header reveal" style="margin-top: 80px;">
+                    <h2 class="academic-title">Experiência & Projetos</h2>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="custom-card project-card reveal">
+                        <span class="project-tag">Frontend</span>
+                        <h3>Página Profissional</h3>
+                        <p>Criação deste ecossistema digital utilizando CSS moderno, variáveis e layouts responsivos.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span> <span>CSS3</span> <span>UI/UX</span>
+                        </div>
+                    </div>
+                    
+                    <div class="custom-card project-card reveal" style="transition-delay: 0.1s;">
+                        <span class="project-tag">Consultoria</span>
+                        <h3>Análise Estratégica</h3>
+                        <p>Otimização de resultados baseada em métricas e experiência do usuário.</p>
+                        <div class="tech-stack">
+                            <span>Métricas</span> <span>ROI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Design Profissional. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animação simples de revelação ao scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

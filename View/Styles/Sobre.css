@@ -1,0 +1,111 @@
+/* Ajustes para o Logotipo em Imagem */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove sublinhado se houver */
+}
+
+.logo-img {
+    height: 80px; /* Ajuste a altura conforme necessário para sua logo */
+    width: auto;  /* Mantém a proporção da largura */
+    display: block;
+}
+
+/* Garante o alinhamento no container da navbar */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Importa as cores da Home */
+.cards-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.academic-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--preto);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo do Card Baseado na Home */
+.custom-card {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--cinza-claro);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.1);
+    border-color: var(--azul);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+.institution {
+    display: block;
+    font-weight: bold;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Estilo de Tags de Projeto */
+.project-tag {
+    background: var(--azul);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.tech-stack span {
+    font-size: 0.75rem;
+    background: var(--cinza-claro);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Animações de Revelação */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .sobre-hero { padding: 40px 0; }
+    .academic-title { font-size: 2rem; }
+}

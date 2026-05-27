@@ -1,0 +1,129 @@
+/* --- Styles/Servicos.css --- */
+
+.services-page {
+    background-color: var(--branco);
+}
+
+.services-hero {
+    text-align: center;
+    padding: 100px 0 60px;
+    background: linear-gradient(180deg, #f8fbff 0%, var(--branco) 100%);
+}
+
+.services-hero h1 {
+    font-size: 3rem;
+    margin: 15px 0;
+    color: var(--preto);
+}
+
+/* Container de Largura Total */
+.project-row {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    max-width: 1400px; /* Largura expandida para ocupar quase tudo */
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 60px;
+}
+
+/* Alternância automática de lado */
+.project-row.alternate .project-container {
+    flex-direction: row-reverse;
+}
+
+/* Estilo do Card Visual */
+.project-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.project-card-display {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    background: var(--branco);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cinza-claro);
+    box-shadow: 0 15px 35px rgba(0, 123, 255, 0.05);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.project-card-display i {
+    font-size: 4rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+.project-card-display h3 {
+    font-size: 1.5rem;
+    color: var(--preto);
+}
+
+.project-card-display:hover {
+    transform: scale(1.03);
+    border-color: var(--azul);
+    box-shadow: 0 20px 45px rgba(0, 123, 255, 0.12);
+}
+
+/* Informações do Projeto */
+.project-info {
+    flex: 1.2;
+}
+
+.project-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(0, 123, 255, 0.1);
+    line-height: 1;
+    display: block;
+}
+
+.project-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--preto);
+}
+
+.project-info p {
+    color: var(--texto-suave);
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.tech-badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.tech-badges span {
+    background: #f0f7ff;
+    color: var(--azul);
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .project-container, .project-row.alternate .project-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .project-info h2 { font-size: 1.8rem; }
+}
