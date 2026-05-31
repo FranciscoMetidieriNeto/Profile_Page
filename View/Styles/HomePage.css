@@ -279,6 +279,34 @@ a:hover {
   text-decoration: underline; /* Aparece o risco ao passar o mouse */
 }
 
+.btn-cert {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: rgba(0, 123, 255, 0.1);
+    color: var(--azul) !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-cert:hover {
+    background-color: var(--azul);
+    color: white !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn-cert i {
+    font-size: 1rem;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .education-timeline {
