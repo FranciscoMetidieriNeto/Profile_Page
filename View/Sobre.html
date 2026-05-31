@@ -20,7 +20,7 @@
                     <li><a href="HomePage.html">Home</a></li>
                     <li><a href="#sobre" class="active">Sobre</a></li>
                     <li><a href="Servicos.html">Serviços</a></li>
-                    <li><a href="Contato.html" class="active btn-nav">Contato</a></li>
+                    <li><a href="Contato.html" class="btn-nav">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,24 +48,30 @@
                 
                 <div class="cards-grid">
                     <div class="custom-card reveal">
-                        <div class="card-icon"><i class="fas fa-university"></i></div>
-                        <h3>Análise de Sistemas</h3>
-                        <span class="institution">FATEC Taquaritinga (2024-2025)</span>
-                        <p>Foco em lógica avançada, engenharia de software e segurança da informação.</p>
+                        <div class="card-content-academic">
+                            <div class="card-icon"><i class="fas fa-university"></i></div>
+                            <h3>Análise de Sistemas</h3>
+                            <span class="institution">FATEC Taquaritinga (2024-2025)</span>
+                            <p>Foco em lógica avançada, engenharia de software e segurança da informação.</p>
+                        </div>
                     </div>
 
                     <div class="custom-card reveal" style="transition-delay: 0.1s;">
-                        <div class="card-icon"><i class="fas fa-code"></i></div>
-                        <h3>Técnico em Sistemas</h3>
-                        <span class="institution">Etec Ibitinga (2021-2023)</span>
-                        <p>Desenvolvimento de capacidades técnicas para o mercado e ensino superior.</p>
+                        <div class="card-content-academic">
+                            <div class="card-icon"><i class="fas fa-code"></i></div>
+                            <h3>Técnico em Sistemas</h3>
+                            <span class="institution">Etec Ibitinga (2021-2023)</span>
+                            <p>Desenvolvimento de capacidades técnicas para o mercado e ensino superior.</p>
+                        </div>
                     </div>
 
                     <div class="custom-card reveal" style="transition-delay: 0.2s;">
-                        <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
-                        <h3>UI/UX Design</h3>
-                        <span class="institution">Google Certificates</span>
-                        <p>Especialização em design centrado no usuário e prototipagem de alta fidelidade.</p>
+                        <div class="card-content-academic">
+                            <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+                            <h3>Ia Python</h3>
+                            <span class="institution">Inteligência Artificial Aplicada em Python (Em andamento)</span>
+                            <p>Especialista em interfaces inteligentes, utilizando visão computacional e PLN para criar sistemas de interação por gestos, voz e reconhecimento de padrões.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -74,24 +80,86 @@
                 </div>
 
                 <div class="cards-grid">
+                    <!-- PROJETO 01: FAVEP -->
                     <div class="custom-card project-card reveal">
-                        <span class="project-tag">Frontend</span>
-                        <h3>Página Profissional</h3>
-                        <p>Criação deste ecossistema digital utilizando CSS moderno, variáveis e layouts responsivos.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span> <span>CSS3</span> <span>UI/UX</span>
+                        <div class="card-banner">
+                            <img src="./assets/Baner projeto FAVEP_ME.png" alt="Banner Projeto FAVEP">
+                        </div>
+                        <div class="card-content"> 
+                            <span class="project-tag">Frontend</span>
+                            <h3>FAVEP - Gerenciamento Agrícola</h3>
+                            <p class="card-text">
+                                🌾 FAVEP: Gestão Agrícola Inteligente<br>
+                                A FAVEP é uma solução full-stack completa projetada para modernizar a administration rural. Ela centraliza desde o controle físico das propriedades até a análise financeira estratégica em uma interface intuitiva.<br><br>
+                                🎯 Objetivos Centrais<br>
+                                • Gestão de Ativos: Controle total de propriedades, safras e insumos.<br>
+                                • Saúde Financeira: Monitoramento detalhado de fluxos de caixa (receitas e despesas).<br>
+                                • Inteligência de Dados: Dashboards com gráficos em tempo real para decisões rápidas e precisas.<br><br>
+                                🚀 Funcionalidades Chave<br>
+                                • Operacional: Registro de ciclos de produção, culturas e produtividade.<br>
+                                • Administrativo: Cadastro de propriedades e gestão de parceiros do agronegócio.<br>
+                                • Analítico: Relatórios automáticos e visualização de estatísticas de desempenho.<br><br>
+                                Resumo: A FAVEP transforma dados brutos do campo em controle operacional e clareza financeira, sendo a ponte tecnológica para a modernização do agronegócio. 📈🚜
+                            </p>
+                            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler mais</button>
+                            <div class="tech-stack">
+                                <span>HTML5</span> <span>CSS3</span> <span>UI/UX</span>
+                            </div>
                         </div>
                     </div>
                     
+                    <!-- PROJETO 02: BARBEARIA -->
                     <div class="custom-card project-card reveal" style="transition-delay: 0.1s;">
-                        <span class="project-tag">Consultoria</span>
-                        <h3>Análise Estratégica</h3>
-                        <p>Otimização de resultados baseada em métricas e experiência do usuário.</p>
-                        <div class="tech-stack">
-                            <span>Métricas</span> <span>ROI</span>
+                        <div class="card-banner">
+                            <img src="./assets/banner_barbearia.png" alt="Banner Aplicativo de Barbearia">
+                        </div>
+                        <div class="card-content">
+                            <span class="project-tag">Mobile</span>
+                            <h3>Aplicativo de agendamento para barbearias</h3>
+                            <p class="card-text">
+                                O sistema une uma interface altamente focada na experiência do usuário (UI/UX) 📱 a um ecossistema robusto de gerenciamento. Suas principais funcionalidades incluem:<br><br>
+                                📅 Agendamento Online: Controle automatizado de horários, datas e serviços disponíveis.<br><br>
+                                👥 Gestão de Cadastros: Módulos dedicados ao controle de clientes e profissionais (barbeiros) 💈.<br><br>
+                                🔐 Painel Administrativo: Fluxo seguro com autenticação para gerenciamento de escalas, relatórios 📊 e controle de rotas 📍.<br><br>
+                                🎨 Identidade Visual Proprietária: Projeto desenvolvido desde a concepção do design, fluxos de telas e criação de logotipo próprio.<br><br>
+                                Uma solução digital ideal para modernizar o atendimento ✨, reduzir faltas 📉 e centralizar o controle operacional do negócio 🚀.
+                            </p>
+                            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler mais</button>
+                            <div class="tech-stack">
+                                <span>React Native</span> <span>Expo</span> <span>Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 03: PÁGINA PROFISSIONAL -->
+                    <div class="custom-card project-card reveal" style="transition-delay: 0.2s;">
+                        <div class="card-banner">
+                            <img src="./assets/foto_inicio.png" alt="Banner Página Profissional">
+                        </div>
+                        <div class="card-content"> 
+                            <span class="project-tag">Frontend</span>
+                            <h3>Página Profissional</h3>
+                            <p class="card-text">
+                                💻 Sobre o Projeto<br>
+                                Este é o seu Portfólio Profissional, um ecossistema digital desenvolvido para centralizar sua trajetória, exibir projetos de alto impacto (como o FAVEP e o TopFit) e servir como seu cartão de visitas na web.<br><br>
+                                🎯 Por que foi desenvolvido?<br>
+                                • Apresentação de Impacto: Unificar seu portfólio de projetos, formação acadêmica e canais de contato em um só lugar.<br>
+                                • Vitrine de UI/UX: Aplicar na prática conceitos avançados de design, hierarquia visual e usabilidade focada na experiência do usuário.<br>
+                                • Código Limpo e Estruturado: Demonstrar domínio em engenharia frontend modular, separando responsabilidades em pastas (Styles, View, Controller).<br><br>
+                                🛠️ Destaques Técnicos<br>
+                                • Layout 100% responsivo (HTML5 Semântico e CSS3 Flexbox/Grid).<br>
+                                • Design System coeso usando variáveis CSS (:root) com a paleta azul tecnológica.<br>
+                                • Elementos dinâmicos em JavaScript Vanilla, como o carrossel de projetos.<br>
+                                • Efeitos visuais modernos (animações de revelação no scroll e sombras sólidas estruturais).
+                            </p>
+                            <button class="read-more-btn" onclick="toggleReadMore(this)">Ler mais</button>
+                            <div class="tech-stack">
+                                <span>HTML5</span> <span>CSS3</span> <span>UI/UX</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -103,7 +171,7 @@
     </footer>
 
     <script>
-        // Animação simples de revelação ao scroll
+        // Animação de revelação ao scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
@@ -111,6 +179,18 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Controle independente da expansão do texto (Ler mais / Ler menos)
+        function toggleReadMore(button) {
+            const textElement = button.parentElement.querySelector('.card-text');
+            textElement.classList.toggle('expanded');
+            
+            if (textElement.classList.contains('expanded')) {
+                button.innerText = 'Ler menos';
+            } else {
+                button.innerText = 'Ler mais';
+            }
+        }
     </script>
 </body>
 </html>

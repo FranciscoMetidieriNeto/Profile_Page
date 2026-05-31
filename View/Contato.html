@@ -38,7 +38,7 @@
             <div class="container">
                 <div class="contact-grid">
                     
-                    <a href="https://wa.me/SEUNUMERO" target="_blank" class="contact-card whatsapp">
+                    <a href="https://wa.me/16996376473?text=Olá%20Francisco!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" class="contact-card whatsapp">
                         <div class="contact-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
@@ -56,14 +56,25 @@
                         <span class="contact-link">Ver perfil <i class="fas fa-arrow-right"></i></span>
                     </a>
 
-                    <a href="mailto:seuemail@exemplo.com" class="contact-card email">
+                    <div class="contact-card email" id="emailCard">
                         <div class="contact-icon">
                             <i class="far fa-envelope"></i>
                         </div>
                         <h3>E-mail</h3>
+                        <p class="email-address">franciscometidieri25@gmail.com</p>
                         <p>Para propostas formais e detalhes de projetos.</p>
-                        <span class="contact-link">Enviar e-mail <i class="fas fa-arrow-right"></i></span>
-                    </a>
+                        
+                        <div class="email-menu-container">
+                            <button class="btn-nav contact-link" onclick="toggleEmailMenu()">
+                                Enviar e-mail <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="emailMenu" class="email-dropdown">
+                                <a href="javascript:void(0)" onclick="openEmail('gmail')"><i class="fab fa-google"></i> Gmail</a>
+                                <a href="javascript:void(0)" onclick="openEmail('outlook')"><i class="fab fa-windows"></i> Outlook / Hotmail</a>
+                                <a href="javascript:void(0)" onclick="openEmail('yahoo')"><i class="fab fa-yahoo"></i> Yahoo Mail</a>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -75,6 +86,9 @@
             <p>&copy; 2024 Todos os direitos reservados. Design Profissional.</p>
         </div>
     </footer>
+
+    <script src="../Controller/EmailHandler.js"></script>
+
 
 </body>
 </html>

@@ -1,4 +1,9 @@
 /* --- Styles/Servicos.css --- */
+:root {
+    --primary-blue: #007BFF;
+    --card-bg: #ffffff;
+    --text-dark: #333;
+}
 
 .services-page {
     background-color: var(--branco);
@@ -25,91 +30,128 @@
 .project-container {
     display: flex;
     align-items: center;
-    max-width: 1400px; /* Largura expandida para ocupar quase tudo */
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 60px 40px;
+    padding: 20px 40px;
     gap: 80px;
 }
 
-/* Alternância automática de lado */
+/* Layout inferior: Carrossel Desktop + Card */
+.project-bottom-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 40px auto 0;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+/* Layout inferior: Carrossel Mobile + Card (Aproximado) */
+.project-bottom-layout-adjusted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    gap: 15px;
+}
+
 .project-row.alternate .project-container {
     flex-direction: row-reverse;
 }
 
-/* Estilo do Card Visual */
+/* Estilo do Card Visual Superior */
 .project-visual {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0 60px; /* Espaço lateral para os botões ficarem fora */
 }
 
-.project-card-display {
+/* CARD WEB (SUPERIOR 01) */
+.project-card-display.web-card {
     width: 100%;
     max-width: 450px;
     height: 300px;
-    background: var(--branco);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--cinza-claro);
-    box-shadow: 0 15px 35px rgba(0, 123, 255, 0.05);
-    transition: transform 0.4s ease, border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/des_web.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px 35px rgba(0, 123, 255, 0.25);
+    transition: transform 0.4s ease;
 }
 
-.project-card-display i {
+.project-card-display.web-card i {
     font-size: 4rem;
     color: var(--azul);
     margin-bottom: 20px;
+    z-index: 2;
 }
 
-.project-card-display h3 {
+.project-card-display.web-card h3 {
     font-size: 1.5rem;
-    color: var(--preto);
+    color: var(--branco);
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.project-card-display:hover {
-    transform: scale(1.03);
-    border-color: var(--azul);
-    box-shadow: 0 20px 45px rgba(0, 123, 255, 0.12);
+/* CARD UI/UX (SUPERIOR 02) */
+.project-card-display.ui-ux-card {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../assets/des_mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 15px 15px 35px rgba(0, 123, 255, 0.25);
 }
 
-/* Informações do Projeto */
-.project-info {
-    flex: 1.2;
+.project-card-display.ui-ux-card i {
+    color: var(--azul);
+    z-index: 2;
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
+.project-card-display.ui-ux-card h3 {
+    color: var(--branco);
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/* Informações do Texto */
+.project-info { flex: 1.2; }
 .project-number {
     font-size: 3rem;
     font-weight: 900;
-    color: rgba(0, 123, 255, 0.1);
+    color: rgba(0, 123, 255, 0.595);
     line-height: 1;
     display: block;
 }
+.project-info h2 { font-size: 2.2rem; margin-bottom: 20px; color: var(--preto); }
+.project-info p { color: var(--texto-suave); margin-bottom: 15px; line-height: 1.8; }
 
-.project-info h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: var(--preto);
-}
-
-.project-info p {
-    color: var(--texto-suave);
-    margin-bottom: 15px;
-    line-height: 1.8;
-}
-
-.tech-badges {
-    display: flex;
-    gap: 10px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-}
-
+.tech-badges { display: flex; gap: 10px; margin-top: 25px; flex-wrap: wrap; }
 .tech-badges span {
     background: #f0f7ff;
     color: var(--azul);
@@ -120,40 +162,47 @@
     border: 1px solid rgba(0, 123, 255, 0.1);
 }
 
+/* CARROSSEL DESKTOP */
 .carousel-container {
-    max-width: 750px; /* Largura confirmada */
-    height: 360px;    /* Altura ajustada para manter a proporção das imagens do sistema */
+    width: 100%;
+    max-width: 750px;
+    height: 360px;
     border-radius: 20px;
     border: 1px solid var(--cinza-claro);
     overflow: hidden;
-    margin: 0 auto;
+    position: relative;
 }
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+/* CARROSSEL MOBILE */
+.carousel-container.mobile-carousel {
+    max-width: 280px;
+    height: 500px;
+    border-radius: 30px;
+    border: 8px solid #1D1D1F;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    background-color: #000;
 }
 
-.carousel-item {
-    min-width: 100%;
-}
-
-.carousel-item img {
+.carousel-container.mobile-carousel .carousel-item img {
     width: 100%;
-    height: 100%;
-    display: block;
-    /* 'contain' garante que toda a interface do sistema apareça sem cortes */
-    object-fit: contain; 
-    background-color: #f4f7f6; /* Cor de fundo suave para as bordas se a imagem for menor */
+    height: 500px;
+    object-fit: cover;
 }
+
+.carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-item { min-width: 100%; }
+.carousel-item img { width: 100%; height: 360px; display: block; object-fit: contain; background-color: #f4f7f6; }
 
 .carousel-btn {
-    position: absolute; /* Agora relativo à .project-visual */
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,33 +212,59 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
 }
-
-.carousel-btn:hover {
-    background: var(--azul);
-    color: var(--branco);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.prev {
-    left: 0; /* Coloca o botão na extremidade esquerda da .project-visual */
-}
-
-.next {
-    right: 0; /* Coloca o botão na extremidade direita da .project-visual */
-}
-
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Responsividade */
+/* CARDS LATERAIS (FAVEP E MOBILE) */
+.card-favep{
+    flex: 0.8;
+    max-width: 380px;
+    background: #ffffff;
+    border-radius: 24px; 
+    padding: 30px;
+    border: 1px solid var(--azul); 
+    box-shadow: -20px 20px 0px var(--azul); /* Sombra sólida azul fixa */
+}
+
+.card-mobile{
+    flex: 0.8;
+    max-width: 380px;
+    background: #ffffff;
+    border-radius: 24px; 
+    padding: 30px;
+    border: 1px solid var(--azul); 
+    box-shadow: -20px 20px 0px var(--azul); /* Sombra sólida azul fixa */
+}
+
+.badge { background: rgba(0, 123, 255, 0.1); color: #007BFF; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: bold; }
+.features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; }
+.feature-item { background: #f8f9fa; padding: 8px; border-radius: 8px; font-size: 0.85rem; display: flex; align-items: center; gap: 8px; }
+.tech-stack { display: flex; flex-wrap: wrap; gap: 8px; }
+.tech { background: #333; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 0.7rem; }
+
+.btn-detalhes {
+    display: block;
+    text-align: center;
+    background: #007BFF;
+    color: white !important;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-detalhes:hover { background: #0056b3; box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3); }
+
+/* Responsividade Geral */
 @media (max-width: 992px) {
-    .project-container, .project-row.alternate .project-container {
+    .project-container, .project-bottom-layout, .project-bottom-layout-adjusted {
         flex-direction: column;
         text-align: center;
         gap: 40px;
     }
-    
-    .project-info h2 { font-size: 1.8rem; }
+    .card-favep, .card-mobile, .carousel-container { max-width: 100%; width: 100%; }
+    .carousel-container.mobile-carousel { max-width: 280px; margin: 0 auto; }
 }

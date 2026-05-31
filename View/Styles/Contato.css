@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .contact-icon {
@@ -67,6 +68,13 @@
     margin-bottom: 25px;
 }
 
+.contact-card .email-address {
+    word-break: break-all;
+    font-weight: 600;
+    color: var(--preto);
+    margin-bottom: 10px;
+}
+
 .contact-link {
     font-weight: 700;
     color: var(--azul);
@@ -75,6 +83,123 @@
     align-items: center;
     gap: 8px;
     transition: gap 0.3s;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Container do menu */
+.email-menu-container {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo do Menu Dropdown */
+.email-dropdown {
+    display: none;
+    position: absolute;
+    top: 110%; /* Mudado de bottom para top para descer o menu */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px; /* Ajuste sutil na largura para melhor leitura */
+    background-color: var(--branco);
+    border: 1px solid var(--cinza-claro);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 100;
+    overflow: hidden;
+    margin-top: 5px; /* Adicionado margem superior em vez de inferior */
+    animation: fadeInUp 0.3s ease; /* Mudado para uma animação condizente */
+}
+
+.email-dropdown.show {
+    display: block;
+}
+
+.email-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--preto);
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+.email-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.email-dropdown a:hover {
+    background-color: #f8f9ff;
+    color: var(--azul);
+}
+
+/* Estilo para o botão de acionamento do menu */
+.email-menu-container .btn-nav.contact-link {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--azul);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-menu-container .btn-nav.contact-link:hover {
+    background-color: var(--azul-claro);
+    transform: translateY(-2px);
+}
+
+/* Ajuste de ícone no botão */
+.email-menu-container .btn-nav.contact-link i {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+/* Rotação do ícone quando o menu estiver aberto (opcional via JS) */
+.email-dropdown.show + .contact-link i {
+    transform: rotate(180deg);
+}
+
+/* Garantia de que o dropdown não seja cortado pelo card */
+.contact-card.email {
+    overflow: visible; /* Permite que o menu saia dos limites do card */
+}
+
+/* Estilo para os ícones dentro do menu dropdown */
+.email-dropdown a i {
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.email-dropdown a .fa-google { color: #DB4437; }
+.email-dropdown a .fa-windows { color: #0078D4; }
+.email-dropdown a .fa-yahoo { color: #6001d2; }
+.email-dropdown a .fa-laptop { color: var(--texto-suave); }
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translate(-50%, -10px); /* Começa um pouco mais acima */
+    }
+    to { 
+        opacity: 1; 
+        transform: translate(-50%, 0); 
+    }
 }
 
 /* Cores e Efeitos Individuais */
