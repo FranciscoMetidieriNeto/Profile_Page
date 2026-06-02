@@ -164,6 +164,118 @@ body {
     font-weight: bold;
 }
 
+.apresentacao-section {
+    padding: 30px 20px; /* Reduzido de 60px para 30px para diminuir a altura total */
+    background-color: #ffffff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apresentacao-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 30px; /* Reduzido o espaço entre a foto e o texto */
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+/* Espaço da Imagem */
+.apresentacao-foto {
+    flex: 1 1 300px; /* Reduzido ligeiramente a base da largura da foto */
+    display: flex;
+    justify-content: center;
+}
+
+.apresentacao-foto img {
+    max-width: 90%; /* Reduzido para ocupar menos espaço vertical */
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Bloco de Texto Compacto */
+.apresentacao-texto {
+    flex: 2 1 500px;
+    padding: 10px 0; /* Adicionado um padding pequeno para controle de altura */
+}
+
+.apresentacao-texto h1 {
+    font-size: 2.2rem; /* Reduzido de 2.5rem para 2.2rem */
+    color: #333333;
+    margin-bottom: 5px; /* Margem menor */
+    font-weight: 700;
+}
+
+.apresentacao-texto .destaque-nome {
+    color: #0076ff; 
+}
+
+.apresentacao-texto h2 {
+    font-size: 1.35rem; /* Reduzido de 1.5rem para 1.35rem */
+    color: #666666;
+    margin-bottom: 15px; /* Margem menor */
+    font-weight: 400;
+}
+
+.apresentacao-texto p {
+    font-size: 1.05rem; /* Reduzido de 1.1rem para 1.05rem */
+    line-height: 1.5; /* Linhas levemente mais próximas */
+    color: #444444;
+    margin-bottom: 10px; /* Espaço menor entre parágrafos */
+}
+
+/* Estilização dos Botões */
+.apresentacao-botoes {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-principal, .btn-secundario {
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-principal {
+    background-color: #0076ff;
+    color: #ffffff;
+}
+
+/* .btn-principal:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-secundario:hover {
+    background-color: #0076ff;
+    color: #ffffff;
+    transform: translateY(-2px);
+} */
+
+/* Responsividade para Telas Menores (Celulares) */
+@media (max-width: 768px) {
+    .apresentacao-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .apresentacao-botoes {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-principal, .btn-secundario {
+        text-align: center;
+        width: 100%;
+    }
+}
+
 /* Seção de Educação Renovada */
 .education {
     padding: 100px 0;
@@ -327,58 +439,71 @@ a:hover {
 
 /* Container que ocupa a largura total */
 .services-alternate {
-    padding: 0;
-    overflow: hidden;
+    padding: 40px 0; /* Reduzido para aproximar as seções */
+    background-color: #f8fbff; 
 }
 
-/* Cada faixa de serviço */
+/* Cada faixa de serviço (Card) */
 .service-row {
-    padding: 100px 0;
-    border-bottom: 1px solid rgba(0, 123, 255, 0.1);
-    /* Gradiente linear suave do branco para um azul muito claro */
-    background: linear-gradient(180deg, var(--branco) 0%, #f4f9ff 100%);
+    padding: 30px 0; /* Reduzido de 60px para 30px */
+    margin-bottom: 20px; /* Menor espaçamento entre os cards */
+    border-radius: 20px; /* Bordas um pouco mais discretas */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+}
+
+/* Efeito de hover mais suave */
+.service-row:hover {
+    background: var(--branco);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.06); /* Sombra mais contida */
+    transform: translateY(-5px); /* Flutuação menor (de 10px para 5px) */
 }
 
 .service-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: 50px; /* Reduzido de 80px para 50px para compactar as colunas */
+    padding: 25px 40px; /* Padding interno menor */
 }
 
-/* Inversão Automática: No segundo card, quarto, etc. */
+/* Inversão Automática para layout em Z */
 .service-row:nth-child(even) .service-flex {
     flex-direction: row-reverse;
 }
 
 /* Estilo do Texto */
 .service-text {
-    flex: 1;
+    flex: 1.2;
 }
 
 .service-number {
-    font-size: 0.9rem;
-    font-weight: 800;
+    font-size: 0.85rem; /* Ajustado para harmonizar */
+    font-weight: 900;
     color: var(--azul);
-    letter-spacing: 2px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     display: block;
     margin-bottom: 10px;
+    opacity: 0.6;
 }
 
 .service-text h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Reduzido de 2.8rem para 2.2rem */
     color: var(--preto);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.2;
+    font-weight: 800;
 }
 
 .service-text p {
-    font-size: 1.15rem;
+    font-size: 1.05rem; /* Reduzido de 1.2rem para 1.05rem */
     color: var(--texto-suave);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    line-height: 1.6;
 }
 
-/* Estilo do Ícone / Visual */
+/* Estilo do Ícone / Visual Reduzido */
 .service-visual {
     flex: 1;
     display: flex;
@@ -387,28 +512,56 @@ a:hover {
 }
 
 .icon-circle {
-    width: 250px;
-    height: 250px;
-    background: var(--branco);
-    border-radius: 50%;
+    width: 170px;  /* Reduzido de 220px para 170px */
+    height: 170px; /* Reduzido de 220px para 170px */
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
-    color: var(--azul);
-    box-shadow: 0 20px 50px rgba(0, 123, 255, 0.1); /* Sombra suave azul */
+    font-size: 3.5rem; /* Ícone proporcionalmente menor (de 4.5rem para 3.5rem) */
+    color: var(--branco);
+    box-shadow: 0 15px 30px rgba(0, 123, 255, 0.25);
     position: relative;
+    animation: morph 8s ease-in-out infinite;
 }
 
-/* Detalhe visual atrás do ícone */
-.icon-circle::before {
+/* Animação mantida para o efeito dinâmico */
+@keyframes morph {
+    0% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; }
+    50% { border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%; }
+    100% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; }
+}
+
+/* Brilho traseiro proporcional */
+.icon-circle::after {
     content: '';
     position: absolute;
-    width: 110%;
-    height: 110%;
-    border: 2px dashed rgba(0, 123, 255, 0.2);
-    border-radius: 50%;
-    animation: rotate 20s linear infinite;
+    width: 115%;
+    height: 115%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.15) 0%, transparent 70%);
+    z-index: -1;
+}
+
+/* Botão Minimalista Ajustado */
+.btn-minimal {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 10px 22px; /* Botão ligeiramente menor */
+    border: 2px solid var(--azul);
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-minimal:hover {
+    background: var(--azul);
+    color: var(--branco);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.15);
 }
 
 @keyframes rotate {

@@ -30,10 +30,11 @@
         <section class="services-hero">
             <div class="container">
                 <h1>Soluções Digitais & <span>Projetos de Alto Impacto</span></h1>
-                <p>Conheça como transformo conceitos em sistemas funcionais utilizando as melhores práticas de desenvolvimento.</p>
+                <p>Transformo conceitos complexos em sistemas funcionais e intuitivos, utilizando as tecnologias mais modernas do mercado para entregar valor real ao usuário final.</p>
             </div>
         </section>
 
+        <!-- SEÇÃO 01: DESENVOLVIMENTO WEB -->
         <section class="project-row">
             <div class="project-container">
                 <div class="project-visual">
@@ -45,16 +46,16 @@
                 <div class="project-info">
                     <span class="project-number">01</span>
                     <h2>Criação de Ecossistemas Responsivos</h2>
-                    <p>Meus projetos são desenvolvidos com foco total em <strong>performance</strong> e <strong>adaptabilidade</strong>. Utilizo HTML5 semântico e CSS3 avançado (Flexbox e Grid) para garantir que a interface seja impecável em qualquer dispositivo.</p>
-                    <p><strong>Como foi desenvolvido:</strong> O foco inicial foi a estruturação de variáveis CSS para facilitar a manutenção e garantir uma identidade visual coesa em todas as páginas, como visto neste portfólio.</p>
+                    <p>Meus projetos são desenvolvidos com focus total em <strong>performance</strong>, <strong>SEO</strong> e <strong>adaptabilidade</strong>. Utilizo HTML5 semântico e CSS3 avançado (Flexbox e Grid) para garantir que a interface seja impecável em qualquer dispositivo, do desktop ao smartphone.</p>
+                    <p><strong>Como foi desenvolvido:</strong> A arquitetura foi pensada para ser escalável, priorizando o carregamento rápido e uma estrutura de código limpa que facilita manutenções futuras e integrações complexas.</p>
                     <div class="tech-badges">
-                        <span>HTML5</span> <span>CSS3</span> <span>Responsive Design</span>
+                        <span>HTML5</span> <span>CSS3</span> <span>Responsive Design</span> <span>Clean Code</span>
                     </div>
                 </div>
             </div>
 
             <div class="project-bottom-layout">
-                <div class="project-visual">
+                <div class="project-visual" id="carousel-web">
                     <div class="carousel-container">
                         <div class="carousel-track">
                             <div class="carousel-item"><img src="assets/projeto1.png" alt="Projeto 1"></div>
@@ -65,8 +66,8 @@
                             <div class="carousel-item"><img src="assets/projeto6.png" alt="Projeto 6"></div>
                             <div class="carousel-item"><img src="assets/projeto7.png" alt="Projeto 7"></div>
                         </div>
-                        <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
-                        <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+                        <button class="carousel-btn prev-btn">&#10094;</button>
+                        <button class="carousel-btn next-btn">&#10095;</button>
                     </div>
                 </div>
 
@@ -76,7 +77,7 @@
                         <h3>FAVEP - Gestão Agrícola</h3>
                     </div>
                     <p class="description">
-                        Plataforma <strong>Full-Stack</strong> robusta para administração rural, focada em controle de produção, finanças e tomada de decisão estratégica.
+                        Uma plataforma <strong>Full-Stack</strong> robusta desenvolvida para otimizar a administração rural. O sistema foca no controle preciso de produção, gestão financeira detalhada e dashboards para tomada de decisão estratégica em tempo real.
                     </p>
                     <div class="features-grid">
                         <div class="feature-item"><span>🌱</span> Produção</div>
@@ -95,9 +96,11 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 02: UI/UX DESIGN -->
         <section class="project-row alternate">
             <div class="project-container">
                 <div class="project-visual">
+                    <!-- Mantido o card padrão escuro igual ao de Desenvolvimento Web -->
                     <div class="project-card-display ui-ux-card">
                         <i class="fas fa-pencil-ruler"></i>
                         <h3>UI/UX Design</h3>
@@ -106,25 +109,21 @@
                 <div class="project-info">
                     <span class="project-number">02</span>
                     <h2>Interfaces Centradas no Usuário</h2>
-                    <p>Aplico metodologias de <strong>Design Thinking</strong> e pesquisa de usuário para criar fluxos lógicos e intuitivos. Meu objetivo é alinhar as necessidades do negócio com a melhor experiência para o usuário final.</p>
-                    <p><strong>Diferencial:</strong> Utilizo prototipagem de alta fidelidade para validar hipóteses e garantir que o produto final seja fiel ao conceito idealizado.</p>
+                    <p>Aplico metodologias de <strong>Design Thinking</strong> e pesquisa de usuário para criar fluxos lógicos e intuitivos. Meu objetivo principal é alinhar as necessidades do negócio com a melhor experiência de usabilidade para o usuário final.</p>
+                    <p><strong>Diferencial:</strong> Utilizo prototipagem de alta fidelidade para validar hipóteses e garantir que o produto final seja visualmente atraente e funcionalmente impecável, seguindo padrões modernos de acessibilidade.</p>
                     <div class="tech-badges">
-                        <span>Figma</span> <span>Prototipagem</span> <span>UX Research</span>
+                        <span>Figma</span> <span>Prototipagem</span> <span>UX Research</span> <span>Usabilidade</span>
                     </div>
                 </div>
             </div>
 
             <div class="project-bottom-layout-adjusted">
                 <div class="project-visual">
-                    <div class="carousel-container mobile-carousel">
-                        <div class="carousel-track">
-                            <div class="carousel-item"><img src="assets/projeto1.png" alt="Tela Mobile 1"></div>
-                            <div class="carousel-item"><img src="assets/projeto2.png" alt="Tela Mobile 2"></div>
-                            <div class="carousel-item"><img src="assets/projeto3.png" alt="Tela Mobile 3"></div>
-                            <div class="carousel-item"><img src="assets/projeto4.png" alt="Tela Mobile 4"></div>
+                    <!-- Imagem mobile no formato de mockup aqui embaixo -->
+                    <div class="mobile-mockup-static">
+                        <div class="screen">
+                            <img src="assets/mobile-foto.png" alt="Interface Mobile UI/UX">
                         </div>
-                        <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
-                        <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
                     </div>
                 </div>
 
@@ -134,7 +133,7 @@
                         <h3>Design & Prototipagem</h3>
                     </div>
                     <p class="description">
-                        Criação de sistemas visuais modernos, focados em usabilidade, acessibilidade e conversão de usuários.
+                        Foco na criação de sistemas visuais modernos e coerentes. Desenvolvo interfaces que equilibram estética e performance, garantindo que cada interação do usuário seja fluida e eficiente.
                     </p>
                     <div class="features-grid">
                         <div class="feature-item"><span>🎨</span> Style Guides</div>
@@ -155,7 +154,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Design Profissional. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Francisco Metidieri Neto. Todos os direitos reservados.</p>
         </div>
     </footer>
 
