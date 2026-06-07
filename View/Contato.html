@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | Vamos Conversar</title>
+    <title>Contato — Francisco Metidieri Neto</title>
     <link rel="stylesheet" href="./Styles/HomePage.css">
     <link rel="stylesheet" href="./Styles/Contato.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,58 +20,77 @@
                     <li><a href="HomePage.html">Home</a></li>
                     <li><a href="Sobre.html">Sobre</a></li>
                     <li><a href="Servicos.html">Serviços</a></li>
-                    <li><a href="Contato.html" class="active btn-nav">Contato</a></li>
+                    <li><a href="Contato.html" class="btn-nav">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="contact-page">
+
+        <!-- ─── HERO ─── -->
         <section class="contact-hero">
             <div class="container">
+                <span class="section-label">Contato</span>
                 <h1>Vamos transformar sua <span>ideia em realidade?</span></h1>
                 <p>Escolha o canal de sua preferência e responderei o mais breve possível.</p>
             </div>
         </section>
 
+        <!-- ─── CARDS ─── -->
         <section class="contact-cards-section">
             <div class="container">
                 <div class="contact-grid">
-                    
-                    <a href="https://wa.me/16996376473?text=Olá%20Francisco!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" class="contact-card whatsapp">
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/16996376473?text=Olá%20Francisco!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+                       target="_blank" class="contact-card whatsapp">
                         <div class="contact-icon">
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <h3>WhatsApp</h3>
-                        <p>Para conversas rápidas e orçamentos diretos.</p>
-                        <span class="contact-link">Iniciar conversa <i class="fas fa-arrow-right"></i></span>
+                        <p>Para conversas rápidas, tire dúvidas e solicite orçamentos diretos de forma ágil.</p>
+                        <span class="contact-link">
+                            Iniciar conversa <i class="fas fa-arrow-right"></i>
+                        </span>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/francisco-metidieri-94b2543a3/" target="_blank" class="contact-card linkedin">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/francisco-metidieri-94b2543a3/"
+                       target="_blank" class="contact-card linkedin">
                         <div class="contact-icon">
                             <i class="fab fa-linkedin-in"></i>
                         </div>
                         <h3>LinkedIn</h3>
-                        <p>Conecte-se profissionalmente e veja meu histórico.</p>
-                        <span class="contact-link">Ver perfil <i class="fas fa-arrow-right"></i></span>
+                        <p>Conecte-se profissionalmente, veja minha trajetória e projetos em destaque.</p>
+                        <span class="contact-link">
+                            Ver perfil <i class="fas fa-arrow-right"></i>
+                        </span>
                     </a>
 
+                    <!-- E-mail -->
                     <div class="contact-card email" id="emailCard">
                         <div class="contact-icon">
                             <i class="far fa-envelope"></i>
                         </div>
                         <h3>E-mail</h3>
                         <p class="email-address">franciscometidieri25@gmail.com</p>
-                        <p>Para propostas formais e detalhes de projetos.</p>
-                        
+                        <p>Para propostas formais, briefings detalhados e projetos de maior escopo.</p>
+
                         <div class="email-menu-container">
                             <button class="btn-nav contact-link" onclick="toggleEmailMenu()">
-                                Enviar e-mail <i class="fas fa-chevron-down"></i>
+                                Enviar e-mail <i class="fas fa-chevron-down" id="chevronIcon"></i>
                             </button>
                             <div id="emailMenu" class="email-dropdown">
-                                <a href="javascript:void(0)" onclick="openEmail('gmail')"><i class="fab fa-google"></i> Gmail</a>
-                                <a href="javascript:void(0)" onclick="openEmail('outlook')"><i class="fab fa-windows"></i> Outlook / Hotmail</a>
-                                <a href="javascript:void(0)" onclick="openEmail('yahoo')"><i class="fab fa-yahoo"></i> Yahoo Mail</a>
+                                <a href="javascript:void(0)" onclick="openEmail('gmail')">
+                                    <i class="fab fa-google"></i> Gmail
+                                </a>
+                                <a href="javascript:void(0)" onclick="openEmail('outlook')">
+                                    <i class="fab fa-windows"></i> Outlook / Hotmail
+                                </a>
+                                <a href="javascript:void(0)" onclick="openEmail('yahoo')">
+                                    <i class="fab fa-yahoo"></i> Yahoo Mail
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -79,16 +98,34 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Todos os direitos reservados. Design Profissional.</p>
+            <p>&copy; 2024 Francisco Metidieri Neto · Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script src="../Controller/EmailHandler.js"></script>
+    <script>
+        function toggleEmailMenu() {
+            const menu = document.getElementById('emailMenu');
+            const chevron = document.getElementById('chevronIcon');
+            menu.classList.toggle('show');
+            chevron.style.transform = menu.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+            chevron.style.transition = 'transform 0.3s ease';
+        }
 
+        // Fecha ao clicar fora
+        document.addEventListener('click', function(e) {
+            const card = document.getElementById('emailCard');
+            if (!card.contains(e.target)) {
+                document.getElementById('emailMenu').classList.remove('show');
+                document.getElementById('chevronIcon').style.transform = 'rotate(0deg)';
+            }
+        });
+    </script>
 
 </body>
 </html>
