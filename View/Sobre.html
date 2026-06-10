@@ -10,21 +10,6 @@
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <a href="HomePage.html" class="logo-link">
-                <img src="./assets/Logo_Metidieri.png" alt="Logotipo do Portfólio" class="logo-img">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="HomePage.html">Home</a></li>
-                    <li><a href="#sobre" class="active">Sobre</a></li>
-                    <li><a href="Servicos.html">Serviços</a></li>
-                    <li><a href="Contato.html" class="btn-nav">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
     <main>
 
@@ -46,8 +31,7 @@
         <section class="cards-section">
             <div class="container">
 
-                <div class="section-header reveal">
-                    <span class="section-label">Formação</span>
+                <div class="section-header-formacao reveal">
                     <h2 class="academic-title">Trajetória Acadêmica</h2>
                 </div>
 
@@ -83,8 +67,7 @@
                 </div>
 
                 <!-- ─── PROJETOS ─── -->
-                <div class="section-header reveal" style="margin-top: 96px;">
-                    <span class="section-label">Portfólio</span>
+                <div class="section-header-projects reveal" style="margin-top: 96px;">
                     <h2 class="academic-title">Experiência &amp; Projetos</h2>
                 </div>
 
@@ -161,11 +144,8 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Francisco Metidieri Neto · Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <script src="../Controller/NavbarHandler.js"></script>
+    <script src="../Controller/FooterHandler.js"></script>
 
     <script>
         // Animação de revelação ao scroll

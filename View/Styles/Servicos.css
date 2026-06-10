@@ -12,6 +12,18 @@
     --borda-escura:  rgba(255, 255, 255, 0.08);
     --texto-mutado:  #94A3B8;
     --fundo-claro:   #F7F7FC;
+    --azul:         #0057FF;
+    --azul-vivo:    #3B82FF;
+    --azul-glow:    rgba(0, 87, 255, 0.18);
+    --azul-sutil:   rgba(0, 87, 255, 0.07);
+    --preto:        #0A0A0F;
+    --titulo:       #0F0F18;
+    --texto:        #3D3D52;
+    --texto-suave:  #7B7B9A;
+    --cinza-claro:  #EAEAF2;
+    --borda:        #E2E2EE;
+    --branco:       #FFFFFF;
+    --fundo:        #F7F7FC;
 }
 
 /* ─── Página base ────────────────────────────── */
@@ -212,8 +224,9 @@
 /* ─── BENTO GRID DE SERVIÇOS ─────────────────── */
 .services-grid-section {
     padding: 112px 32px;
-    max-width: 1140px;
+    max-width: 100%;
     margin: 0 auto;
+    background: linear-gradient(135deg, #030364 20%, #0e0edd 100%);
 }
 
 .bento-grid {
@@ -276,6 +289,21 @@
     border-color: var(--azul, #0057FF);
 }
 
+.bento-card-services {
+    align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 48px;
+}
+
+.bento-card-services h2 {
+    font-family: var(--font-display, 'Syne', sans-serif);
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: var(--branco, #FFFFFF);
+    letter-spacing: -0.025em;
+}
+
 .bento-card h3 {
     font-family: var(--font-display, 'Syne', sans-serif);
     font-size: 1.2rem;
@@ -288,8 +316,8 @@
 }
 
 .bento-card p {
-    font-size: 0.93rem;
-    color: var(--texto-suave, #7B7B9A);
+    font-size: 0.95rem;
+    color: var(--preto, #7B7B9A);
     line-height: 1.65;
     font-weight: 300;
     position: relative;

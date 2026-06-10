@@ -95,7 +95,7 @@ a:hover { opacity: 0.75; }
 }
 
 .logo-img {
-    height: 44px;
+    height: 80px;
     width: auto;
     display: block;
 }
@@ -470,14 +470,14 @@ a:hover { opacity: 0.75; }
     font-family: var(--font-display);
     font-size: 2.4rem;
     font-weight: 800;
-    color: var(--titulo);
+    color: var(--branco);
     letter-spacing: -0.025em;
     margin-bottom: 12px;
 }
 
 .section-header p {
-    color: var(--texto-suave);
-    font-size: 1.05rem;
+    color: var(--cinza-claro);
+    font-size: 1.2rem;
     max-width: 480px;
     margin: 0 auto;
     font-weight: 300;
@@ -486,7 +486,7 @@ a:hover { opacity: 0.75; }
 /* ─── EDUCAÇÃO ───────────────────────────────── */
 .education {
     padding: 100px 0;
-    background: var(--fundo);
+    background: linear-gradient(135deg, #030364 20%, #0e0edd 100%);
 }
 
 .education-timeline {
@@ -509,8 +509,8 @@ a:hover { opacity: 0.75; }
 
 /* Card */
 .edu-card {
-    background: var(--branco);
-    border: 1px solid var(--borda);
+    background: #ffffffda;
+    border: 1px solid var(--branco);
     padding: 32px;
     border-radius: var(--radius-md);
     margin-bottom: 24px;
@@ -593,7 +593,7 @@ a:hover { opacity: 0.75; }
 .edu-info a {
     display: inline-block;
     font-weight: 500;
-    color: var(--texto-suave);
+    color: var(--titulo);
     font-size: 0.9rem;
     margin-bottom: 12px;
     transition: var(--transition);
@@ -606,7 +606,7 @@ a:hover { opacity: 0.75; }
 .edu-local {
     display: block;
     font-weight: 500;
-    color: var(--texto-suave);
+    color: var(--texto);
     font-size: 0.9rem;
     margin-bottom: 12px;
 }
@@ -645,6 +645,43 @@ a:hover { opacity: 0.75; }
 }
 
 /* ─── SERVIÇOS / HABILIDADES ─────────────────── */
+.section-header-habilities {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-label-habilities {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--azul);
+    background: var(--azul-sutil);
+    padding: 5px 14px;
+    border-radius: var(--radius-full);
+    margin-bottom: 16px;
+}
+
+.section-header-habilities h2 {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--preto);
+    letter-spacing: -0.025em;
+    margin-bottom: 12px;
+}
+
+.section-header-habilities p {
+    color: var(--texto);
+    font-size: 1.2rem;
+    max-width: 480px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+
 .services-alternate {
     padding: 100px 0;
     background: var(--branco);
@@ -674,8 +711,8 @@ a:hover { opacity: 0.75; }
 }
 
 .service-card {
-    background: var(--branco);
-    border: 1px solid var(--borda);
+    background: #050597;
+    border: 3px solid var(--azul);
     border-radius: var(--radius-lg);
     padding: 40px 32px;
     position: relative;
@@ -704,21 +741,6 @@ a:hover { opacity: 0.75; }
 
 .service-card:hover::before { opacity: 1; }
 
-/* Número sobreposto grande */
-.service-card-number {
-    position: absolute;
-    top: 16px;
-    right: 24px;
-    font-family: var(--font-display);
-    font-size: 5rem;
-    font-weight: 900;
-    color: var(--azul);
-    opacity: 0.05;
-    line-height: 1;
-    pointer-events: none;
-    user-select: none;
-    transition: var(--transition);
-}
 
 .service-card:hover .service-card-number { opacity: 0.09; }
 
@@ -726,7 +748,7 @@ a:hover { opacity: 0.75; }
 .service-card-icon {
     width: 56px;
     height: 56px;
-    background: var(--azul-sutil);
+    background: var(--branco);
     border: 1px solid rgba(0, 87, 255, 0.14);
     border-radius: var(--radius-md);
     display: flex;
@@ -751,7 +773,7 @@ a:hover { opacity: 0.75; }
     font-family: var(--font-display);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--titulo);
+    color: var(--branco);
     letter-spacing: -0.01em;
     margin-bottom: 10px;
     line-height: 1.3;
@@ -759,7 +781,7 @@ a:hover { opacity: 0.75; }
 
 .service-card p {
     font-size: 0.95rem;
-    color: var(--texto-suave);
+    color: var(--cinza-claro);
     line-height: 1.7;
     font-weight: 300;
 }
@@ -782,7 +804,7 @@ a:hover { opacity: 0.75; }
 }
 
 .btn-minimal i {
-    font-size: 0.75rem;
+    font-size: 1rem;
     transition: transform 0.25s ease;
 }
 
